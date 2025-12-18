@@ -3,13 +3,11 @@ public class ArtGallery {
     private String location;
     private Artwork[] artworks;
 
-
     public ArtGallery(String name, String location, Artwork[] artworks) {
         this.name = name;
         this.location = location;
         this.artworks = artworks;
     }
-
 
     public String getName() {
         return name;
@@ -53,3 +51,5 @@ public class ArtGallery {
         }
     }
 }
+
+

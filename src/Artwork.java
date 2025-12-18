@@ -1,10 +1,8 @@
 public class Artwork {
-
     private String title;
     private int yearCreated;
     private double price;
-    private Artist artist; // Relationship
-
+    private Artist artist;
 
     public Artwork(String title, int yearCreated, double price, Artist artist) {
         this.title = title;
@@ -12,7 +10,6 @@ public class Artwork {
         this.price = price;
         this.artist = artist;
     }
-
 
     public String getTitle() {
         return title;
@@ -30,7 +27,6 @@ public class Artwork {
         return artist;
     }
 
-
     public void setTitle(String title) {
         this.title = title;
     }
@@ -47,10 +43,9 @@ public class Artwork {
         this.artist = artist;
     }
 
-
     public void showInfo() {
         System.out.println("Artwork: " + title);
-        System.out.println("Created in: " + yearCreated);
+        System.out.println("Year: " + yearCreated);
         System.out.println("Price: $" + price);
         System.out.println("Artist: " + artist.getName());
     }

@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-
         Artist artist1 = new Artist("Vincent van Gogh", "Dutch", 1853);
         Artist artist2 = new Artist("Pablo Picasso", "Spanish", 1881);
 

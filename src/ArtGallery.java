@@ -39,15 +39,11 @@ public class ArtGallery {
         for (Artwork a : artworks) {
             System.out.println("- " + a.getTitle() + " by " + a.getArtist().getName());
         }
-    }
 
-    public void compareArtworkPrices(Artwork a1, Artwork a2) {
-        if (a1.getPrice() > a2.getPrice()) {
-            System.out.println(a1.getTitle() + " is more expensive than " + a2.getTitle());
-        } else if (a1.getPrice() < a2.getPrice()) {
-            System.out.println(a2.getTitle() + " is more expensive than " + a1.getTitle());
-        } else {
-            System.out.println("Both artworks have the same price.");
+        public.void.compare(art1, art2){
+            if(price.art1>price.art2) System.out.println("art1 price is higher ");{
+            }else if(price.art1<price.art2) System.out.println("art2 price is lower");
+            }else { System.out.println("They are equal");
         }
     }
 }

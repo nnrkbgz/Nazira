@@ -40,3 +40,28 @@ public class Artist {
     }
 }
 
+public class Artist extends Person {
+
+    private String nationality;
+    private int birthYear;
+
+    public Artist(String name, String nationality, int birthYear) {
+        super(name);
+        this.nationality = nationality;
+        this.birthYear = birthYear;
+    }
+
+    public String getNationality() {
+        return nationality;
+    }
+
+    public int getBirthYear() {
+        return birthYear;
+    }
+
+    public String getInfo() {
+        return name + " (" + nationality + ", " + birthYear + ")";
+    }
+}
+
+

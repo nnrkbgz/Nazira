@@ -39,13 +39,53 @@ public class ArtGallery {
         for (Artwork a : artworks) {
             System.out.println("- " + a.getTitle() + " by " + a.getArtist().getName());
         }
-
-        public.void.compare(art1, art2){
-            if(price.art1>price.art2) System.out.println("art1 price is higher ");{
-            }else if(price.art1<price.art2) System.out.println("art2 price is lower");
-            }else { System.out.println("They are equal");
-        }
     }
 }
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ArtGallery {
+
+    private String name;
+    private ArrayList<Artwork> artworks = new ArrayList<>();
+
+    public ArtGallery(String name) {
+        this.name = name;
+    }
+
+    public void addArtwork(Artwork artwork) {
+        artworks.add(artwork);
+    }
+
+    public void showGallery() {
+        System.out.println("Gallery: " + name);
+        for (Artwork a : artworks) {
+            System.out.println(a);
+        }
+    }
+
+    public Artwork searchByTitle(String title) {
+        for (Artwork a : artworks) {
+            if (a.getTitle().equalsIgnoreCase(title)) {
+                return a;
+            }
+        }
+        return null;
+    }
+
+    public void filterByYear(int year) {
+        for (Artwork a : artworks) {
+            if (a.getYear() == year) {
+                System.out.println(a);
+            }
+        }
+    }
+
+    public void sortByPrice() {
+        Collections.sort(artworks);
+    }
+}
+
 
 

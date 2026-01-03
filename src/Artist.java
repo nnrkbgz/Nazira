@@ -59,6 +59,7 @@ public class Artist extends Person {
         return birthYear;
     }
 
+    @Override
     public String getInfo() {
         return name + " (" + nationality + ", " + birthYear + ")";
     }

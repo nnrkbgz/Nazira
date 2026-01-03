@@ -22,3 +22,36 @@ public class Main {
     }
 }
 
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        Artist artist1 = new Artist("Van Gogh", "Dutch", 1853);
+        Artist artist2 = new Artist("Picasso", "Spanish", 1881);
+
+        ArtGallery gallery = new ArtGallery("Modern Art Gallery");
+
+        gallery.addArtwork(new Artwork("Starry Night", 1889, 1000000, artist1));
+        gallery.addArtwork(new Artwork("Guernica", 1937, 2000000, artist2));
+
+        gallery.showGallery();
+
+        System.out.print("\nEnter title to search: ");
+        String title = scanner.nextLine();
+
+        Artwork found = gallery.searchByTitle(title);
+        if (found != null) {
+            System.out.println("Found: " + found);
+        } else {
+            System.out.println("Artwork not found");
+        }
+
+        System.out.println("\nSorted by price:");
+        gallery.sortByPrice();
+        gallery.showGallery();
+    }
+}
